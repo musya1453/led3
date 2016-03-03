@@ -282,6 +282,188 @@ h2 {
 .section-calc {
   background: image-url('bg/calc-bg.jpg');
   color: #fff;
+  padding: 45px 0;
+
+  h2 {
+    margin: 0 0 20px;
+  }
+
+  p {
+    text-align: center;
+    margin-bottom: 45px;
+  }
+
+  .calc-body {
+    background: #e8e6e6;
+    color: #000000;
+    padding: 40px 30px;
+  }
+
+  .calc-item {
+    width: 540px;
+    display: inline-block;
+    padding-right: 30px;
+    vertical-align: top;
+
+    .ui-slider ul {
+      position: absolute;
+      left: -22px;
+      list-style: none;
+      bottom: -30px;
+      margin: 0;
+      padding: 0;
+      right: -22px;
+
+      li {
+        float: left;
+        text-align: center;
+        position: relative;
+
+        &:before {
+          @include pseudo-block($top: -4px, $left: 50%);
+          @include transform(translateX(-50%));
+          @include oneline-sprite-box($icons, li)
+        }
+      }
+    }
+
+    .one-slide {
+      margin-bottom: 70px;
+
+      .ui-slider ul li {
+        width: 9.09%;
+      }
+
+      .name:before {
+        @include pseudo-block($top: 50%, $left: -5px);
+        @include transform(translateY(-50%));
+        @include oneline-sprite-box($icons, arr-2);
+      }
+    }
+
+    .two-slide {
+      margin-bottom: 40px;
+
+      .name:before {
+        @include pseudo-block($top: 50%, $left: -5px);
+        @include transform(translateY(-50%) rotate(90deg));
+        @include oneline-sprite-box($icons, arr-2);
+      }
+
+      .ui-slider ul li {
+        width: 12.5%;
+      }
+    }
+
+    .btn-light {
+
+      .title {
+        display: inline-block;
+      }
+
+      .btns {
+        display: inline-block;
+        vertical-align: middle;
+        @include clearfix();
+        @include border-radius(5px);
+        border: 1px solid rgba(0, 0, 0, 0.18);
+        overflow: hidden;
+
+        a {
+          float: left;
+          padding: 7px 15px;
+          background: #ffffff;
+          border-right: 1px solid #ababab;
+          text-align: center;
+          color: #000;
+          text-decoration: none;
+
+          &:last-child {
+            border-right: none;
+          }
+        }
+      }
+    }
+
+    .title {
+      margin-bottom: 25px;
+
+      .name {
+        font-family: $SegoeUI;
+        font-size: 22px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 15px;
+        padding-left: 25px;
+        position: relative;
+      }
+
+      .contain {
+        background: #fff;
+        border: 1px solid #168de2;
+        @include box-shadow(0 0 7px 0px #168de2);
+        display: inline-block;
+        width: 115px;
+        font-size: 19px;
+        padding: 6px;
+        @include clearfix();
+        text-align: right;
+        vertical-align: middle;
+
+        #contentSlider, #contentSlider2 {
+          float: left;
+        }
+      }
+    }
+  }
+
+  .calc-sum {
+    display: inline-block;
+    width: 335px;
+    padding-left: 40px;
+    border-left: 1px solid #d2d1d1;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 20px;
+
+    .title {
+      text-align: center;
+      font-size: 16px;
+      margin-bottom: 25px;
+      display: block;
+    }
+
+    .summ {
+      font-size: 48px;
+      font-family: $SegoeUI;
+      color: #171717;
+      margin-bottom: 75px;
+    }
+
+    .btn {
+      font-size: 19px;
+      color: #fff;
+      text-decoration: none;
+      font-family: $SegoeUI;
+      background: #168de2;
+      text-transform: uppercase;
+      display: block;
+      border: 1px solid #0d7bc9;
+      padding: 17px 0 19px;
+      line-height: 1;
+    }
+
+    p {
+      font-size: 13px;
+      text-align: left;
+      margin-bottom: 15px;
+    }
+  }
+
+  .btns a.active{
+    background: #a0d6fb !important;
+  }
+
 }
 
 .section-news {
